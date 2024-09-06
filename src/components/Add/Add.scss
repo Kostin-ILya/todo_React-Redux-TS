@@ -1,0 +1,75 @@
+.add {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.add__input {
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em 5em 1em 3em;
+  border: none;
+  box-shadow: var(--shadow-elevation-low);
+  transition: box-shadow 0.2s;
+}
+
+.add__input:focus {
+  outline: none;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.add__input::placeholder {
+  font-style: italic;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.add::before {
+  content: '';
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-image: url(../../assets/icon__down.svg);
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+
+.add:has(.add__input:focus)::before {
+  opacity: 1;
+}
+
+.add__save-button {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  border-radius: 0.2em;
+  cursor: pointer;
+  visibility: hidden;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.add__save-button_active {
+  visibility: visible;
+}
+
+.add__save-button:hover {
+  opacity: 0.7;
+}
+
+.add__save-button:active {
+  transform: translateY(-50%) scale(0.9);
+}
