@@ -25,7 +25,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url(../../images/icon__checkbox.svg);
+  background-image: url(../../assets/icon__checkbox.svg);
   background-position: center;
   background-size: contain;
   /* Анимация */
@@ -34,13 +34,5 @@
 
 /* Нажатое состояние - фон контейнера */
 .checkbox__system-checkbox:checked + .checkbox__custom-checkbox {
-  background-image: url(../../images/icon__checkbox_checked.svg);
+  background-image: url(../../assets/icon__checkbox_checked.svg);
 }
-
-/* В фокусе */
-/* .checkbox__system-checkbox:focus ~ .checkbox__label {
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-  text-underline-offset: 5px;
-  text-decoration-style: dotted;
-} */
