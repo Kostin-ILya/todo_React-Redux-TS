@@ -1,6 +1,7 @@
 import Header from 'components/Header/Header'
 import Add from 'components/Add/Add'
 import TodoList from 'components/TodoList/TodoList'
+import Filter from 'components/Filter/Filter'
 
 import './App.scss'
 
@@ -12,6 +13,8 @@ function App() {
 
       <main className="main">
         <TodoList />
+
+        <Filter />
       </main>
     </div>
   )
